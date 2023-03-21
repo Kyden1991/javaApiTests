@@ -31,7 +31,6 @@ public class CourierCreationApi {
 
 
     @Test
-    @Description("HTTP 201 status code is returned by the POST/api/v1/courier method with valid request parameters")
     public void postCourierCreationReturnStatusCode201() {
         File json = new File("src/main/resources/CreateCourier.json");
         Response response =
@@ -54,7 +53,6 @@ public class CourierCreationApi {
     }
 
     @Test
-    @Description("HTTP 400 status code is returned by the POST/api/v1/courier method without login field")
     public void postCourierCreationReturnStatusCode400WithoutRequiredField() {
         String json = "{\"password\": \"1234\"," +
                 "\"firstName\": \"saske\"}";
@@ -67,7 +65,6 @@ public class CourierCreationApi {
 
     // todo rename variable names
     @Test
-    @Description("HTTP 409 status code is returned by the POST/api/v1/courier method if login is already used")
     public void postCourierCreationReturnStatusCode409WithDuplicateLogin() {
         File json = new File("src/main/resources/CreateCourier.json");
         Response response1 =
