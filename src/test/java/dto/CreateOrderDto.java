@@ -14,9 +14,9 @@ public class CreateOrderDto {
     private int rentTime;
     private String deliveryDate;
     private String comment;
-    private String color;
+    private String[] color;
 
-    public CreateOrderDto(String firstName, String lastName, String address, int metroStation, String phone, int rentTime, String deliveryDate, String comment, String color) {
+    public CreateOrderDto(String firstName, String lastName, String address, int metroStation, String phone, int rentTime, String deliveryDate, String comment, String[] color) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -92,11 +92,11 @@ public class CreateOrderDto {
         this.comment = comment;
     }
 
-    public String getColor() {
+    public String[] getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(String[] color) {
         this.color = color;
     }
 }
