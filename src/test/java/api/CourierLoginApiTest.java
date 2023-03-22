@@ -1,17 +1,13 @@
 package api;
 
 import io.qameta.allure.Description;
-import dto.LoginCourierDto;
+import apiTestsStuding.dto.LoginCourierDto;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.swing.text.FlowView;
-import java.io.File;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class CourierLoginApiTest {
@@ -60,6 +56,19 @@ public class CourierLoginApiTest {
     @Test
     public void postCourierCreationReturnStatusCode400WithoutPasswordField() {
         String json = "{\"login\": \"Art\"}";
+        Response response =
+                given()
+                        .body(json).log().all()
+                        .when()
+                        .post("/api/v1/courier/login");
+        response.then().log().all().assertThat().statusCode(400);
+    }
+
+    @Description("HTTP 400 status code is returned by the POST/api/v1/courier/login method with invalid password field")
+    @Test
+    public void postCourierCreationReturnStatusCode400WithInvalidPassword() {
+        String json = "{\"login\": \"Art\"" +
+                "\"password\": \"qwerty\"}";
         Response response =
                 given()
                         .body(json).log().all()

@@ -1,4 +1,4 @@
-package api.pojoClasses;
+package apiTestsStuding.dto.pojoClasses;
 
 public class AvailableStation {
     private String name;

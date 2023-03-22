@@ -1,9 +1,8 @@
 package api;
 
-//import io.qameta.allure.Description;
-import dto.CreateCourierDto;
-import dto.DeleteCourierDto;
 import io.qameta.allure.Description;
+import apiTestsStuding.dto.CreateCourierDto;
+import apiTestsStuding.dto.DeleteCourierDto;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.After;
@@ -11,7 +10,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.json.JSONObject;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +47,7 @@ public class CourierCreationApiTest {
     }
 
 
-    @Description("HTTP 201 status code is returned by the POST/api/v1/courier method with valid request parameters")
+    @Description("HTTP 201 status code is returned by the POST/api/v1/courier method with valid request parameters in all required fields")
     @Test
     public void postCourierCreationReturnStatusCode201() {
         CreateCourierDto createCourier = new CreateCourierDto("hokage", 12345, "naruto");

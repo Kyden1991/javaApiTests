@@ -1,4 +1,4 @@
-package dto;
+package apiTestsStuding.dto;
 
 public class CreateCourierDto {
 
@@ -35,4 +35,6 @@ public class CreateCourierDto {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    //методы
 }
