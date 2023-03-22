@@ -4,7 +4,7 @@ import groovy.transform.builder.Builder;
 
 import java.util.ArrayList;
 
-@Builder
+
 public class CreateOrderDto {
     private String firstName;
     private String lastName;

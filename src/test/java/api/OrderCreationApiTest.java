@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.notNullValue;
 
 //@RunWith(Parameterized.class)
-public class OrderCreationApi {
+public class OrderCreationApiTest {
     @Before
     public void baseUrl() {
         RestAssured.baseURI = "http://qa-scooter.praktikum-services.ru";
@@ -60,7 +60,7 @@ public class OrderCreationApi {
 //        });
 //    }
     @Test
-    @Description("HTTP 201 status code is returned by the POST/api/v1/courier method with valid request parameters and different colors")
+    @Description("Return HTTP 201 status code and track in body by the POST/api/v1/orders method with valid request parameters and different colors")
     public void postOrderCreationReturnStatusCode201WithDiffParameters() {
         for (String[] color : this.color) {
             CreateOrderDto order = new CreateOrderDto("Art",
