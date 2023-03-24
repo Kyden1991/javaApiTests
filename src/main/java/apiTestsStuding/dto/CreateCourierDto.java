@@ -1,5 +1,15 @@
 package apiTestsStuding.dto;
 
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static apiTestsStuding.constants.Constants.BASE_URL;
+import static apiTestsStuding.constants.Constants.PATH_COURIER_CREATION;
+
+
+
 public class CreateCourierDto {
 
     private String login;
