@@ -1,4 +1,14 @@
-package dto;
+package apiTestsStuding.dto;
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static apiTestsStuding.constants.Constants.BASE_URL;
+import static apiTestsStuding.constants.Constants.PATH_COURIER_CREATION;
+
+
 
 public class CreateCourierDto {
 
@@ -10,6 +20,21 @@ public class CreateCourierDto {
         this.login = login;
         this.password = password;
         this.firstName = firstName;
+    }
+
+    public CreateCourierDto(int password, String firstName) {
+        this.password = password;
+        this.firstName = firstName;
+    }
+
+    public CreateCourierDto(String login, String firstName) {
+        this.login = login;
+        this.firstName = firstName;
+    }
+
+    public CreateCourierDto(String login, int password) {
+        this.login = login;
+        this.password = password;
     }
 
     public String getLogin() {
@@ -35,4 +60,6 @@ public class CreateCourierDto {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    //методы
 }

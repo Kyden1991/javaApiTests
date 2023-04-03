@@ -1,4 +1,4 @@
-package dto;
+package apiTestsStuding.dto;
 
 public class DeleteCourierDto {
     private int id;

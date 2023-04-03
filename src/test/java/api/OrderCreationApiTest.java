@@ -1,16 +1,12 @@
 package api;
 
-import dto.CreateOrderDto;
+import api.BaseTest.BaseSpecClass;
+import apiTestsStuding.dto.CreateOrderDto;
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.notNullValue;
@@ -29,8 +25,6 @@ public class OrderCreationApiTest {
                     {"BLACK", "GREY"},
                     {""}
             };
-
-
 
 //    public OrderCreationApi(String[] color, String[] color2) {
 //        this.color = color;
@@ -72,6 +66,8 @@ public class OrderCreationApiTest {
                     "2024-01-31",
                     "Test",
                     color);
+
+//            BaseSpecClass.responseWithMatchToJsonSchema(response, 200, "OrdersJsonSchema.json");
             Response response =
                     given()
                             .body(order).log().all()

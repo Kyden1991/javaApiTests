@@ -1,4 +1,4 @@
-package dto;
+package apiTestsStuding.dto;
 
 public class LoginCourierDto {
     private String login;
@@ -7,6 +7,14 @@ public class LoginCourierDto {
     public LoginCourierDto(String login, int password) {
         this.login = login;
         this.password = password;
+    }
+
+    public LoginCourierDto(int password) {
+        this.password = password;
+    }
+
+    public LoginCourierDto(String login) {
+        this.login = login;
     }
 
     public String getLogin() {

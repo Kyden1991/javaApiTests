@@ -1,6 +1,6 @@
-package dto;
+package apiTestsStuding.dto;
 
-import groovy.transform.builder.Builder;
+
 
 import java.util.ArrayList;
 

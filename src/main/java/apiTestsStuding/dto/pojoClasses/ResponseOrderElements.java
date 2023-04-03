@@ -1,4 +1,4 @@
-package api.pojoClasses;
+package apiTestsStuding.dto.pojoClasses;
 
 import java.util.ArrayList;
 import java.util.Date;
