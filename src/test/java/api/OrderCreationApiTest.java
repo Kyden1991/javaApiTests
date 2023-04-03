@@ -1,5 +1,6 @@
 package api;
 
+import api.BaseTest.BaseSpecClass;
 import apiTestsStuding.dto.CreateOrderDto;
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
@@ -24,8 +25,6 @@ public class OrderCreationApiTest {
                     {"BLACK", "GREY"},
                     {""}
             };
-
-
 
 //    public OrderCreationApi(String[] color, String[] color2) {
 //        this.color = color;
@@ -67,6 +66,8 @@ public class OrderCreationApiTest {
                     "2024-01-31",
                     "Test",
                     color);
+
+//            BaseSpecClass.responseWithMatchToJsonSchema(response, 200, "OrdersJsonSchema.json");
             Response response =
                     given()
                             .body(order).log().all()

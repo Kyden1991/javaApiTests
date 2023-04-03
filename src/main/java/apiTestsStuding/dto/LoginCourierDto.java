@@ -9,6 +9,14 @@ public class LoginCourierDto {
         this.password = password;
     }
 
+    public LoginCourierDto(int password) {
+        this.password = password;
+    }
+
+    public LoginCourierDto(String login) {
+        this.login = login;
+    }
+
     public String getLogin() {
         return login;
     }
