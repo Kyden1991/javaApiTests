@@ -7,12 +7,10 @@ import io.qameta.allure.Description;
 import org.junit.Test;
 
 import static api.BaseTest.BaseSpecClass.responseStatusCode;
-import static api.BaseTest.BaseMethods.randomPassword;
-import static api.BaseTest.BaseMethods.randomString;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class CourierCreationApiTest extends BaseMethods {
+public class CourierCreationTest extends BaseMethods {
 
     @Description("HTTP 201 status code is returned by the POST/api/v1/courier method with valid request parameters in all required fields")
     @Test
@@ -34,8 +32,7 @@ public class CourierCreationApiTest extends BaseMethods {
     @Description("HTTP 201 status code and correct body is returned by the POST/api/v1/courier method with valid request parameters")
     @Test
     public void postCourierCreationReturnStatusCode201WithCorrectBody() {
-        BaseSpecClass.responseWithBodyAssert(CourierCreationSpec
-                        .createCourier(randomString(), randomPassword(), randomString()),
+        BaseSpecClass.responseWithBodyAssert(CourierCreationSpec.createCourier(randomString(), randomPassword(), randomString()),
                         201, "ok", equalTo("true"));
     }
 
