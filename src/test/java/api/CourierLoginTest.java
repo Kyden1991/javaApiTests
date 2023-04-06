@@ -4,20 +4,13 @@ import api.BaseTest.BaseMethods;
 import api.BaseTest.BaseSpecClass;
 import api.specifications.CourierLoginSpec;
 import io.qameta.allure.Description;
-import apiTestsStuding.dto.LoginCourierDto;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import org.junit.Before;
 import org.junit.Test;
 
-import static api.BaseTest.BaseMethods.randomPassword;
-import static api.BaseTest.BaseMethods.randomString;
 import static api.BaseTest.BaseSpecClass.responseStatusCode;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class CourierLoginApiTest extends BaseMethods {
+public class CourierLoginTest extends BaseMethods {
 
     @Description("HTTP 200 status code is returned by the POST/api/v1/courier/login method with valid request parameters")
     @Test
